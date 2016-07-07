@@ -8,20 +8,40 @@
 
 /* Begin PBXBuildFile section */
 		2195B4C41D0B864700C9ED36 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2195B4C31D0B864700C9ED36 /* AppDelegate.swift */; };
-		2195B4C61D0B864700C9ED36 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2195B4C51D0B864700C9ED36 /* ViewController.swift */; };
 		2195B4C91D0B864700C9ED36 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2195B4C71D0B864700C9ED36 /* Main.storyboard */; };
 		2195B4CB1D0B864700C9ED36 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2195B4CA1D0B864700C9ED36 /* Assets.xcassets */; };
 		2195B4CE1D0B864700C9ED36 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2195B4CC1D0B864700C9ED36 /* LaunchScreen.storyboard */; };
+		2195B4D61D0B879500C9ED36 /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2195B4D51D0B879500C9ED36 /* Recipe.swift */; };
+		2195B4DB1D0CAE7000C9ED36 /* RecipeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2195B4DA1D0CAE7000C9ED36 /* RecipeTableViewController.swift */; };
+		2195B4DD1D0CBDB300C9ED36 /* BagCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2195B4DC1D0CBDB300C9ED36 /* BagCollectionViewController.swift */; };
+		2195B4DF1D0CBE5700C9ED36 /* Bag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2195B4DE1D0CBE5700C9ED36 /* Bag.swift */; };
+		2195B4E11D0CC41E00C9ED36 /* AddBagViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2195B4E01D0CC41E00C9ED36 /* AddBagViewController.swift */; };
+		2195B4E31D0CCA8F00C9ED36 /* BagCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2195B4E21D0CCA8E00C9ED36 /* BagCollectionViewCell.swift */; };
+		2195B4E51D0CEDF000C9ED36 /* RecipeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2195B4E41D0CEDF000C9ED36 /* RecipeTableViewCell.swift */; };
+		2195B4E71D0DD60E00C9ED36 /* AddRecipeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2195B4E61D0DD60E00C9ED36 /* AddRecipeTableViewController.swift */; };
+		2195B4E91D0E62FB00C9ED36 /* RecipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2195B4E81D0E62FB00C9ED36 /* RecipeViewController.swift */; };
+		91AB2F3A65AE2E5D04D0CE57 /* Pods_espressoRecipes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74252407C07733A0B223C8CE /* Pods_espressoRecipes.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		2195B4C01D0B864700C9ED36 /* espressoRecipes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = espressoRecipes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2195B4C31D0B864700C9ED36 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		2195B4C51D0B864700C9ED36 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		2195B4C81D0B864700C9ED36 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2195B4CA1D0B864700C9ED36 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2195B4CD1D0B864700C9ED36 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2195B4CF1D0B864700C9ED36 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2195B4D51D0B879500C9ED36 /* Recipe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
+		2195B4DA1D0CAE7000C9ED36 /* RecipeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeTableViewController.swift; sourceTree = "<group>"; };
+		2195B4DC1D0CBDB300C9ED36 /* BagCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BagCollectionViewController.swift; sourceTree = "<group>"; };
+		2195B4DE1D0CBE5700C9ED36 /* Bag.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bag.swift; sourceTree = "<group>"; };
+		2195B4E01D0CC41E00C9ED36 /* AddBagViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddBagViewController.swift; sourceTree = "<group>"; };
+		2195B4E21D0CCA8E00C9ED36 /* BagCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BagCollectionViewCell.swift; sourceTree = "<group>"; };
+		2195B4E41D0CEDF000C9ED36 /* RecipeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeTableViewCell.swift; sourceTree = "<group>"; };
+		2195B4E61D0DD60E00C9ED36 /* AddRecipeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddRecipeTableViewController.swift; sourceTree = "<group>"; };
+		2195B4E81D0E62FB00C9ED36 /* RecipeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeViewController.swift; sourceTree = "<group>"; };
+		696B237478F3034B3158BC1D /* Pods-espressoRecipes.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-espressoRecipes.debug.xcconfig"; path = "Pods/Target Support Files/Pods-espressoRecipes/Pods-espressoRecipes.debug.xcconfig"; sourceTree = "<group>"; };
+		74252407C07733A0B223C8CE /* Pods_espressoRecipes.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_espressoRecipes.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E7B9554D5DE58EBE55ED217C /* Pods-espressoRecipes.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-espressoRecipes.release.xcconfig"; path = "Pods/Target Support Files/Pods-espressoRecipes/Pods-espressoRecipes.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +49,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				91AB2F3A65AE2E5D04D0CE57 /* Pods_espressoRecipes.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		071A7E749355887FA0FD3432 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				74252407C07733A0B223C8CE /* Pods_espressoRecipes.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		08BAD2CE6B8F35E5898DBA75 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				696B237478F3034B3158BC1D /* Pods-espressoRecipes.debug.xcconfig */,
+				E7B9554D5DE58EBE55ED217C /* Pods-espressoRecipes.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		2195B4B71D0B864700C9ED36 = {
 			isa = PBXGroup;
 			children = (
 				2195B4C21D0B864700C9ED36 /* espressoRecipes */,
 				2195B4C11D0B864700C9ED36 /* Products */,
+				08BAD2CE6B8F35E5898DBA75 /* Pods */,
+				071A7E749355887FA0FD3432 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -55,13 +95,29 @@
 			isa = PBXGroup;
 			children = (
 				2195B4C31D0B864700C9ED36 /* AppDelegate.swift */,
-				2195B4C51D0B864700C9ED36 /* ViewController.swift */,
 				2195B4C71D0B864700C9ED36 /* Main.storyboard */,
+				2195B4E21D0CCA8E00C9ED36 /* BagCollectionViewCell.swift */,
+				2195B4E41D0CEDF000C9ED36 /* RecipeTableViewCell.swift */,
+				2195B4E01D0CC41E00C9ED36 /* AddBagViewController.swift */,
+				2195B4E61D0DD60E00C9ED36 /* AddRecipeTableViewController.swift */,
+				2195B4DC1D0CBDB300C9ED36 /* BagCollectionViewController.swift */,
+				2195B4E81D0E62FB00C9ED36 /* RecipeViewController.swift */,
+				2195B4DA1D0CAE7000C9ED36 /* RecipeTableViewController.swift */,
+				2195B4D91D0B87FD00C9ED36 /* Models */,
 				2195B4CA1D0B864700C9ED36 /* Assets.xcassets */,
 				2195B4CC1D0B864700C9ED36 /* LaunchScreen.storyboard */,
 				2195B4CF1D0B864700C9ED36 /* Info.plist */,
 			);
 			path = espressoRecipes;
+			sourceTree = "<group>";
+		};
+		2195B4D91D0B87FD00C9ED36 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				2195B4DE1D0CBE5700C9ED36 /* Bag.swift */,
+				2195B4D51D0B879500C9ED36 /* Recipe.swift */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +127,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2195B4D21D0B864700C9ED36 /* Build configuration list for PBXNativeTarget "espressoRecipes" */;
 			buildPhases = (
+				00234FFD1005248A8C50F3EB /* 📦 Check Pods Manifest.lock */,
 				2195B4BC1D0B864700C9ED36 /* Sources */,
 				2195B4BD1D0B864700C9ED36 /* Frameworks */,
 				2195B4BE1D0B864700C9ED36 /* Resources */,
+				0EBFCF7655A1EAB21E043256 /* 📦 Embed Pods Frameworks */,
+				584F06202F956B193F198730 /* 📦 Copy Pods Resources */,
+				2195B4EA1D0F1AD500C9ED36 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -96,6 +156,7 @@
 				TargetAttributes = {
 					2195B4BF1D0B864700C9ED36 = {
 						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = 2P8374U38H;
 					};
 				};
 			};
@@ -130,13 +191,82 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		00234FFD1005248A8C50F3EB /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		0EBFCF7655A1EAB21E043256 /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-espressoRecipes/Pods-espressoRecipes-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2195B4EA1D0F1AD500C9ED36 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Fabric/run\" 286260583db4b71690d7719fa2a698e48d4488a1 c13601233d855aabf8b369ae9bd4c66e14241f9990ab32cc3c5348bc6cb435a2";
+		};
+		584F06202F956B193F198730 /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-espressoRecipes/Pods-espressoRecipes-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		2195B4BC1D0B864700C9ED36 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2195B4C61D0B864700C9ED36 /* ViewController.swift in Sources */,
+				2195B4D61D0B879500C9ED36 /* Recipe.swift in Sources */,
 				2195B4C41D0B864700C9ED36 /* AppDelegate.swift in Sources */,
+				2195B4E11D0CC41E00C9ED36 /* AddBagViewController.swift in Sources */,
+				2195B4E71D0DD60E00C9ED36 /* AddRecipeTableViewController.swift in Sources */,
+				2195B4E91D0E62FB00C9ED36 /* RecipeViewController.swift in Sources */,
+				2195B4DB1D0CAE7000C9ED36 /* RecipeTableViewController.swift in Sources */,
+				2195B4DF1D0CBE5700C9ED36 /* Bag.swift in Sources */,
+				2195B4DD1D0CBDB300C9ED36 /* BagCollectionViewController.swift in Sources */,
+				2195B4E31D0CCA8F00C9ED36 /* BagCollectionViewCell.swift in Sources */,
+				2195B4E51D0CEDF000C9ED36 /* RecipeTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -247,23 +377,31 @@
 		};
 		2195B4D31D0B864700C9ED36 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 696B237478F3034B3158BC1D /* Pods-espressoRecipes.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = espressoRecipes/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.michaeldwilliams.espressoRecipes;
+				PRODUCT_BUNDLE_IDENTIFIER = com.michaeldwilliams.coffeeRecipes;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
 		2195B4D41D0B864700C9ED36 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E7B9554D5DE58EBE55ED217C /* Pods-espressoRecipes.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = espressoRecipes/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.michaeldwilliams.espressoRecipes;
+				PRODUCT_BUNDLE_IDENTIFIER = com.michaeldwilliams.coffeeRecipes;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -286,6 +424,7 @@
 				2195B4D41D0B864700C9ED36 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
