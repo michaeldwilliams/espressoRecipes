@@ -2,15 +2,15 @@ PODS:
   - ChameleonFramework/Default (2.1.0)
   - ChameleonFramework/Swift (2.1.0):
     - ChameleonFramework/Default
-  - Crashlytics (3.7.1):
+  - Crashlytics (3.8.1):
     - Fabric (~> 1.6.3)
   - DZNEmptyDataSet (1.8.1)
-  - Fabric (1.6.7)
-  - Realm (1.0.1):
-    - Realm/Headers (= 1.0.1)
-  - Realm/Headers (1.0.1)
-  - RealmSwift (1.0.1):
-    - Realm (= 1.0.1)
+  - Fabric (1.6.8)
+  - Realm (1.1.0):
+    - Realm/Headers (= 1.1.0)
+  - Realm/Headers (1.1.0)
+  - RealmSwift (1.1.0):
+    - Realm (= 1.1.0)
 
 DEPENDENCIES:
   - ChameleonFramework/Swift
@@ -21,11 +21,11 @@ DEPENDENCIES:
 
 SPEC CHECKSUMS:
   ChameleonFramework: d21a3cc247abfe5e37609a283a8238b03575cf64
-  Crashlytics: 3cdd4c9655be68032a0cf0379e0fb5ef6af22cad
+  Crashlytics: 4391d8df0b125345e9f209c5db6e7f40a6a8435d
   DZNEmptyDataSet: 9525833b9e68ac21c30253e1d3d7076cc828eaa7
-  Fabric: caf7580c725e64db144f610ac65cd60956911dc7
-  Realm: 2e15e39d35b08abb529e212ed5d8af107b5236c8
-  RealmSwift: d73ea2af08c3676dbdd5e4b669651a0f492162a4
+  Fabric: 5755268d0171435ab167e3d0878a28a777deaf10
+  Realm: ceecf1a4540c4ce9efe196fe73fa9855bce05bd8
+  RealmSwift: 838058b2db95b12cb86bd0cf209df642c33fb60a
 
 PODFILE CHECKSUM: 415994cf177e744c6f7860c1198c6ffb94a772fb
 
