@@ -3,7 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -18,16 +18,25 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Coffee Maker" translatesAutoresizingMaskIntoConstraints="NO" id="Fio-SR-HbH">
-                                <rect key="frame" x="180" y="235" width="240" height="129"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Espresso Recipes" textAlignment="center" lineBreakMode="middleTruncation" baselineAdjustment="alignBaselines" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="GJd-Yh-RWb">
+                                <rect key="frame" x="20" y="68" width="560" height="43"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="36"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="CoffeeMaker" translatesAutoresizingMaskIntoConstraints="NO" id="uN3-6A-zX4">
+                                <rect key="frame" x="20" y="119" width="560" height="432"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Fio-SR-HbH" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" constant="160" id="ElY-AJ-17k"/>
-                            <constraint firstItem="Fio-SR-HbH" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="215" id="Jba-Nf-VUv"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Fio-SR-HbH" secondAttribute="trailing" constant="160" id="gj5-QK-mcd"/>
-                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="Fio-SR-HbH" secondAttribute="bottom" constant="236" id="n0C-B9-XAf"/>
+                            <constraint firstItem="uN3-6A-zX4" firstAttribute="trailing" secondItem="GJd-Yh-RWb" secondAttribute="trailing" id="2Gz-PK-PUy"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="uN3-6A-zX4" secondAttribute="bottom" constant="49" id="4C9-NP-EaN"/>
+                            <constraint firstItem="uN3-6A-zX4" firstAttribute="top" secondItem="GJd-Yh-RWb" secondAttribute="bottom" constant="8" symbolic="YES" id="6iR-f0-5z3"/>
+                            <constraint firstAttribute="centerX" secondItem="GJd-Yh-RWb" secondAttribute="centerX" id="Q3B-4B-g5h"/>
+                            <constraint firstItem="uN3-6A-zX4" firstAttribute="leading" secondItem="GJd-Yh-RWb" secondAttribute="leading" id="ktE-SL-Lhh"/>
+                            <constraint firstItem="GJd-Yh-RWb" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="bottom" multiplier="1/3" constant="-110.5" id="moa-c2-u7t"/>
+                            <constraint firstItem="GJd-Yh-RWb" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" constant="20" symbolic="YES" id="x7j-FC-K8j"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -37,6 +46,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Coffee Maker" width="96" height="96"/>
+        <image name="CoffeeMaker" width="2000" height="2000"/>
     </resources>
 </document>
