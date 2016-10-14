@@ -19,7 +19,7 @@ class BagCollectionViewController: UICollectionViewController, UICollectionViewD
     
     var realm:Realm!
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         collectionView?.reloadData()
     }
@@ -31,7 +31,7 @@ class BagCollectionViewController: UICollectionViewController, UICollectionViewD
         
         self.bags = realm.objects(Bag)
         
-        collectionView!.backgroundColor = .whiteColor()
+        collectionView!.backgroundColor = .white
         
         collectionView?.emptyDataSetSource = self
         collectionView?.emptyDataSetDelegate = self
@@ -43,13 +43,13 @@ class BagCollectionViewController: UICollectionViewController, UICollectionViewD
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using [segue destinationViewController].
         // Pass the selected object to the new view controller.
         if segue.identifier == "showRecipesForBagSegue" {
-            let destVC = segue.destinationViewController as! RecipeViewController
+            let destVC = segue.destination as! RecipeViewController
             let cell = sender as! BagCollectionViewCell
-            let indexPath = collectionView?.indexPathForCell(cell)
+            let indexPath = collectionView?.indexPath(for: cell)
             destVC.bagName = bags[(indexPath?.row)!].name
             destVC.bag = bags[(indexPath?.row)!]
             destVC.backgroundColor = cell.backgroundColor
@@ -60,29 +60,29 @@ class BagCollectionViewController: UICollectionViewController, UICollectionViewD
 
     // MARK: UICollectionViewDataSource
 
-    override func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
+    override func numberOfSections(in collectionView: UICollectionView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1
     }
 
 
-    override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of items
         return bags.count
     }
 
-    override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        let cell:BagCollectionViewCell = collectionView.dequeueReusableCellWithReuseIdentifier(reuseIdentifier, forIndexPath: indexPath) as! BagCollectionViewCell
+    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell:BagCollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! BagCollectionViewCell
     
         // Configure the cell
         
         let bag = bags[indexPath.row]
         cell.nameLabel.text = bag.name
         cell.roasterLabel.text = bag.roaster
-        cell.nameLabel.textColor = .whiteColor()
-        cell.roasterLabel.textColor = .whiteColor()
+        cell.nameLabel.textColor = .white
+        cell.roasterLabel.textColor = .white
         
-        switch (indexPath.row % 6) {
+        switch ((indexPath as NSIndexPath).row % 6) {
         case 0:
             cell.backgroundColor = FlatRed()
             break;
@@ -117,26 +117,26 @@ class BagCollectionViewController: UICollectionViewController, UICollectionViewD
     
     // MARK: UICollectionViewDelegateFlowLayout
     
-    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
-        return CGSizeMake((UIScreen.mainScreen().bounds.width-17)/3,155)
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: (UIScreen.main.bounds.width-17)/3,height: 155)
     }
 
     
     //MARK: DZNEmptyDataSetDelegate and DataSource
     
-    func titleForEmptyDataSet(scrollView: UIScrollView!) -> NSAttributedString! {
+    func title(forEmptyDataSet scrollView: UIScrollView!) -> NSAttributedString! {
         let str = "\n\nWelcome"
-        let attrs = [NSFontAttributeName: UIFont.preferredFontForTextStyle(UIFontTextStyleTitle3)]
+        let attrs = [NSFontAttributeName: UIFont.preferredFont(forTextStyle: UIFontTextStyle.title3)]
         return NSAttributedString(string: str, attributes: attrs)
     }
     
-    func descriptionForEmptyDataSet(scrollView: UIScrollView!) -> NSAttributedString! {
+    func description(forEmptyDataSet scrollView: UIScrollView!) -> NSAttributedString! {
         let str = "Add your coffee bags here by tapping the '+' at the top right"
-        let attrs = [NSFontAttributeName: UIFont.preferredFontForTextStyle(UIFontTextStyleBody)]
+        let attrs = [NSFontAttributeName: UIFont.preferredFont(forTextStyle: UIFontTextStyle.body)]
         return NSAttributedString(string: str, attributes: attrs)
     }
     
-    func imageForEmptyDataSet(scrollView: UIScrollView!) -> UIImage! {
+    func image(forEmptyDataSet scrollView: UIScrollView!) -> UIImage! {
         return UIImage(named: "coffee")
     }
 

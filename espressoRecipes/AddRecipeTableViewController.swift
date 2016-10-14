@@ -15,10 +15,10 @@ class AddRecipeTableViewController: UITableViewController {
     let realm = try! Realm()
     var bag : Bag?
     
-    @IBAction func cancelBarButtonTapped(sender: UIBarButtonItem) {
-        dismissViewControllerAnimated(true, completion: nil)
+    @IBAction func cancelBarButtonTapped(_ sender: UIBarButtonItem) {
+        dismiss(animated: true, completion: nil)
     }
-    @IBAction func saveBarButtonTapped(sender: UIBarButtonItem) {
+    @IBAction func saveBarButtonTapped(_ sender: UIBarButtonItem) {
         recipe.bag = bag
         recipe.dose = Int(doseTextField.text!)!
         recipe.yield = Int(yieldTextField.text!)!
@@ -27,7 +27,7 @@ class AddRecipeTableViewController: UITableViewController {
         try! realm.write {
             realm.add(recipe)
         }
-        dismissViewControllerAnimated(true, completion: nil)
+        dismiss(animated: true, completion: nil)
     }
     @IBOutlet weak var doseTextField: UITextField!
     @IBOutlet weak var yieldTextField: UITextField!

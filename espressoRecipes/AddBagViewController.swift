@@ -19,10 +19,10 @@ class AddBagViewController: UITableViewController {
     @IBOutlet weak var weightTextField: UITextField!
     @IBOutlet weak var roastTextField: UITextField!
     @IBOutlet weak var tastingNotesTextView: UITextView!
-    @IBAction func cancelButtonTapped(sender: UIBarButtonItem) {
-        dismissViewControllerAnimated(true, completion: nil)
+    @IBAction func cancelButtonTapped(_ sender: UIBarButtonItem) {
+        dismiss(animated: true, completion: nil)
     }
-    @IBAction func saveButtonTapped(sender: UIBarButtonItem){
+    @IBAction func saveButtonTapped(_ sender: UIBarButtonItem){
         bag.name = nametextField.text ?? ""
         bag.roaster = roasterTextField.text ?? ""
         bag.weight = Int(weightTextField.text!) ?? 0
@@ -33,7 +33,7 @@ class AddBagViewController: UITableViewController {
         try! self.realm.write {
             self.realm.add(self.bag)
         }
-        dismissViewControllerAnimated(true, completion: nil)
+        dismiss(animated: true, completion: nil)
     }
     override func viewDidLoad() {
         super.viewDidLoad()

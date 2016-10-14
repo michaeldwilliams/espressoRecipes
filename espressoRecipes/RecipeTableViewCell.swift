@@ -16,28 +16,28 @@ class RecipeTableViewCell: UITableViewCell {
     @IBOutlet weak var notesLabel: UILabel!
     var recipeId : String?
    
-    @IBAction func favoriteStarButtonTapped(sender: UIButton) {
-        updateFavorite(!favoritedButton.selected)
+    @IBAction func favoriteStarButtonTapped(_ sender: UIButton) {
+        updateFavorite(!favoritedButton.isSelected)
     }
     
-    private func updateFavorite(selected:Bool) {
+    fileprivate func updateFavorite(_ selected:Bool) {
         if let realm = try? Realm(),
             let id  = self.recipeId,
-            let recipe = realm.objectForPrimaryKey(Recipe.self, key:id) {
+            let recipe = realm.object(ofType: Recipe.self, forPrimaryKey:id as AnyObject) {
             
             try! realm.write {
                 recipe.favorite = selected
             }
             
-            favoritedButton.selected = recipe.favorite
+            favoritedButton.isSelected = recipe.favorite
             print(recipe.favorite)
         }
     
     }
     
-    func configureWithRecipe(recipe: Recipe) {
+    func configureWithRecipe(_ recipe: Recipe) {
         recipeId = recipe.recipeId
-        favoritedButton.selected = recipe.favorite
+        favoritedButton.isSelected = recipe.favorite
     }
 
     
@@ -46,7 +46,7 @@ class RecipeTableViewCell: UITableViewCell {
         // Initialization code
     }
 
-    override func setSelected(selected: Bool, animated: Bool) {
+    override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state

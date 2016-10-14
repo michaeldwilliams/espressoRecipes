@@ -27,7 +27,7 @@ class RecipeViewController: UIViewController, UITableViewDelegate, UITableViewDa
     @IBOutlet weak var weightLabel: UILabel!
     @IBOutlet weak var roastLabel: UILabel!
     @IBOutlet weak var tastingNotesLabel: UILabel!
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
         self.recipeTableView.reloadData()
@@ -51,7 +51,7 @@ class RecipeViewController: UIViewController, UITableViewDelegate, UITableViewDa
         self.recipeTableView.estimatedRowHeight = 50
         self.recipeTableView.rowHeight = UITableViewAutomaticDimension
         self.recipeTableView.tableFooterView = UIView()
-        self.recipeTableView.backgroundColor = UIColor.flatWhiteColor()
+        self.recipeTableView.backgroundColor = UIColor.flatWhite()
         self.recipeTopView.backgroundColor = backgroundColor
         self.recipeTableView.emptyDataSetSource = self
         self.recipeTableView.emptyDataSetDelegate = self
@@ -68,19 +68,19 @@ class RecipeViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     // MARK: - Table view data source
     
-     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+     func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return recipes.count
     }
     
-     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         return 1
     }
     
     
-     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("recipeCell", forIndexPath: indexPath) as! RecipeTableViewCell
+     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "recipeCell", for: indexPath) as! RecipeTableViewCell
         
         let recipe = recipes[indexPath.section]
         cell.recipeLabel?.text = "Dose: \(recipe.dose)g | Yield: \(recipe.yield)g | Time: \(recipe.time) sec"
@@ -92,19 +92,19 @@ class RecipeViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     //MARK: DZNEmptyDataSetDelegate and DataSource
     
-    func titleForEmptyDataSet(scrollView: UIScrollView!) -> NSAttributedString! {
+    func title(forEmptyDataSet scrollView: UIScrollView!) -> NSAttributedString! {
         let str = "\n\nWelcome"
-        let attrs = [NSFontAttributeName: UIFont.preferredFontForTextStyle(UIFontTextStyleTitle3)]
+        let attrs = [NSFontAttributeName: UIFont.preferredFont(forTextStyle: UIFontTextStyle.title3)]
         return NSAttributedString(string: str, attributes: attrs)
     }
     
-    func descriptionForEmptyDataSet(scrollView: UIScrollView!) -> NSAttributedString! {
+    func description(forEmptyDataSet scrollView: UIScrollView!) -> NSAttributedString! {
         let str = "Add your coffee recipies here by tapping the '+' at the top right"
-        let attrs = [NSFontAttributeName: UIFont.preferredFontForTextStyle(UIFontTextStyleBody)]
+        let attrs = [NSFontAttributeName: UIFont.preferredFont(forTextStyle: UIFontTextStyle.body)]
         return NSAttributedString(string: str, attributes: attrs)
     }
     
-    func imageForEmptyDataSet(scrollView: UIScrollView!) -> UIImage! {
+    func image(forEmptyDataSet scrollView: UIScrollView!) -> UIImage! {
         return UIImage(named: "coffee")
     }
 
@@ -114,11 +114,11 @@ class RecipeViewController: UIViewController, UITableViewDelegate, UITableViewDa
     // MARK: - Navigation
     
     // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
         if segue.identifier == "addRecipesForBagSegue" {
-            let navVC = segue.destinationViewController as! UINavigationController
+            let navVC = segue.destination as! UINavigationController
             let destVC = navVC.viewControllers.first as! AddRecipeTableViewController
             destVC.bag = bag
         }

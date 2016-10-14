@@ -11,7 +11,7 @@ import RealmSwift
 
 class Bag: Object {
     
-    dynamic var bagId = NSUUID().UUIDString
+    dynamic var bagId = UUID().uuidString
     
     dynamic var roaster = ""
     dynamic var name = ""

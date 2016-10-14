@@ -11,7 +11,7 @@ import RealmSwift
 
 class Recipe: Object {
     
-    dynamic var recipeId = NSUUID().UUIDString
+    dynamic var recipeId = UUID().uuidString
     dynamic var bag : Bag?
     dynamic var dose = 0
     dynamic var yield = 0
