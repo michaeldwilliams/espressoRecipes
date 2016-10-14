@@ -32,12 +32,3 @@ class Recipe: Object {
     
     
 }
-
-//extension Recipe {
-//    var favoriteBool:String {
-//        return favorite == true ? "True" : "False"
-//    }
-//    var favoriteIcon:UIImage? {
-//        return favorite == true ? UIImage(named: "star_filled") : UIImage(named: "star")
-//    }
-//}
