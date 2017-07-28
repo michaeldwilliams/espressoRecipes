@@ -242,7 +242,7 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lfU-5c-UoS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="721" y="287"/>
+            <point key="canvasLocation" x="666" y="382"/>
         </scene>
         <!--Add a Recipe-->
         <scene sceneID="PPO-Fx-sqI">
@@ -556,7 +556,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="16r-Fb-dCz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1447" y="287"/>
+            <point key="canvasLocation" x="1363" y="382"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="oK4-C0-ncp">
@@ -574,7 +574,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9is-Jk-7pD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-13" y="287"/>
+            <point key="canvasLocation" x="67" y="258"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Fgf-QU-59Z">

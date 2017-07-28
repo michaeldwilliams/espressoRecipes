@@ -51,7 +51,7 @@ class RecipeViewController: UIViewController, UITableViewDelegate, UITableViewDa
         self.recipeTableView.estimatedRowHeight = 50
         self.recipeTableView.rowHeight = UITableViewAutomaticDimension
         self.recipeTableView.tableFooterView = UIView()
-        self.recipeTableView.backgroundColor = UIColor.flatWhite()
+        self.recipeTableView.backgroundColor = UIColor.flatWhite
         self.recipeTopView.backgroundColor = backgroundColor
         self.recipeTableView.emptyDataSetSource = self
         self.recipeTableView.emptyDataSetDelegate = self
@@ -94,13 +94,13 @@ class RecipeViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     func title(forEmptyDataSet scrollView: UIScrollView!) -> NSAttributedString! {
         let str = "\n\nWelcome"
-        let attrs = [NSFontAttributeName: UIFont.preferredFont(forTextStyle: UIFontTextStyle.title3)]
+        let attrs = [NSAttributedStringKey.font: UIFont.preferredFont(forTextStyle: UIFontTextStyle.title3)]
         return NSAttributedString(string: str, attributes: attrs)
     }
     
     func description(forEmptyDataSet scrollView: UIScrollView!) -> NSAttributedString! {
         let str = "Add your coffee recipies here by tapping the '+' at the top right"
-        let attrs = [NSFontAttributeName: UIFont.preferredFont(forTextStyle: UIFontTextStyle.body)]
+        let attrs = [NSAttributedStringKey.font: UIFont.preferredFont(forTextStyle: UIFontTextStyle.body)]
         return NSAttributedString(string: str, attributes: attrs)
     }
     

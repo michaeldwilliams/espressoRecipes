@@ -11,13 +11,13 @@ import RealmSwift
 
 class Recipe: Object {
     
-    dynamic var recipeId = UUID().uuidString
-    dynamic var bag : Bag?
-    dynamic var dose = 0
-    dynamic var yield = 0
-    dynamic var time = ""
-    dynamic var notes = ""
-    dynamic var favorite = false
+    @objc dynamic var recipeId = UUID().uuidString
+    @objc dynamic var bag : Bag?
+    @objc dynamic var dose = 0
+    @objc dynamic var yield = 0
+    @objc dynamic var time = ""
+    @objc dynamic var notes = ""
+    @objc dynamic var favorite = false
     
     convenience init(dose:Int, yield:Int, time:String) {
         self.init()

@@ -36,7 +36,7 @@ class RecipeTableViewController: UITableViewController {
         self.tableView.estimatedRowHeight = 44
         self.tableView.rowHeight = UITableViewAutomaticDimension
         self.tableView.tableFooterView = UIView()
-        self.tableView.backgroundColor = UIColor.flatWhite()
+        self.tableView.backgroundColor = UIColor.flatWhite
     }
 
 

@@ -11,13 +11,13 @@ import RealmSwift
 
 class Bag: Object {
     
-    dynamic var bagId = UUID().uuidString
+    @objc dynamic var bagId = UUID().uuidString
     
-    dynamic var roaster = ""
-    dynamic var name = ""
-    dynamic var weight = 0
-    dynamic var tastingNotes = ""
-    dynamic var roast = ""
+    @objc dynamic var roaster = ""
+    @objc dynamic var name = ""
+    @objc dynamic var weight = 0
+    @objc dynamic var tastingNotes = ""
+    @objc dynamic var roast = ""
     
     
     convenience init(roaster:String, name:String, weight:Int) {

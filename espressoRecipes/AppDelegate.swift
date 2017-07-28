@@ -45,8 +45,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Now that we've told Realm how to handle the schema change, opening the file
         // will automatically perform the migration
         
-        try! Realm()
-        print (Realm.Configuration.defaultConfiguration.fileURL)
+        let _ = try! Realm()
+        print (Realm.Configuration.defaultConfiguration.fileURL!)
         Fabric.sharedSDK().debug = true
         Fabric.with([Crashlytics.self])
 

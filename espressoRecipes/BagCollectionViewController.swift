@@ -29,7 +29,7 @@ class BagCollectionViewController: UICollectionViewController, UICollectionViewD
         
         realm = try! Realm()
         
-        self.bags = realm.objects(Bag)
+        self.bags = realm.objects(Bag.self)
         
         collectionView!.backgroundColor = .white
         
@@ -126,13 +126,13 @@ class BagCollectionViewController: UICollectionViewController, UICollectionViewD
     
     func title(forEmptyDataSet scrollView: UIScrollView!) -> NSAttributedString! {
         let str = "\n\nWelcome"
-        let attrs = [NSFontAttributeName: UIFont.preferredFont(forTextStyle: UIFontTextStyle.title3)]
+        let attrs = [NSAttributedStringKey.font: UIFont.preferredFont(forTextStyle: UIFontTextStyle.title3)]
         return NSAttributedString(string: str, attributes: attrs)
     }
     
     func description(forEmptyDataSet scrollView: UIScrollView!) -> NSAttributedString! {
         let str = "Add your coffee bags here by tapping the '+' at the top right"
-        let attrs = [NSFontAttributeName: UIFont.preferredFont(forTextStyle: UIFontTextStyle.body)]
+        let attrs = [NSAttributedStringKey.font: UIFont.preferredFont(forTextStyle: UIFontTextStyle.body)]
         return NSAttributedString(string: str, attributes: attrs)
     }
     
