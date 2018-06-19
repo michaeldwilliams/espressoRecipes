@@ -21,6 +21,9 @@
 		2195B4E91D0E62FB00C9ED36 /* RecipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2195B4E81D0E62FB00C9ED36 /* RecipeViewController.swift */; };
 		21E73D911D8DC58A0061822C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21E73D8F1D8DC58A0061822C /* LaunchScreen.storyboard */; };
 		91AB2F3A65AE2E5D04D0CE57 /* Pods_espressoRecipes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74252407C07733A0B223C8CE /* Pods_espressoRecipes.framework */; };
+		F930D8B51F6B13710094FDDA /* AddBagTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F930D8B41F6B13710094FDDA /* AddBagTableViewCell.swift */; };
+		F97B2CE41F69DC75002DCB6E /* Date+DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F97B2CE31F69DC75002DCB6E /* Date+DateFormatter.swift */; };
+		F97B2CE61F6AB7CC002DCB6E /* BagStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F97B2CE51F6AB7CC002DCB6E /* BagStore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +45,9 @@
 		696B237478F3034B3158BC1D /* Pods-espressoRecipes.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-espressoRecipes.debug.xcconfig"; path = "Pods/Target Support Files/Pods-espressoRecipes/Pods-espressoRecipes.debug.xcconfig"; sourceTree = "<group>"; };
 		74252407C07733A0B223C8CE /* Pods_espressoRecipes.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_espressoRecipes.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7B9554D5DE58EBE55ED217C /* Pods-espressoRecipes.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-espressoRecipes.release.xcconfig"; path = "Pods/Target Support Files/Pods-espressoRecipes/Pods-espressoRecipes.release.xcconfig"; sourceTree = "<group>"; };
+		F930D8B41F6B13710094FDDA /* AddBagTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBagTableViewCell.swift; sourceTree = "<group>"; };
+		F97B2CE31F69DC75002DCB6E /* Date+DateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+DateFormatter.swift"; sourceTree = "<group>"; };
+		F97B2CE51F6AB7CC002DCB6E /* BagStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BagStore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,8 +100,10 @@
 		2195B4C21D0B864700C9ED36 /* espressoRecipes */ = {
 			isa = PBXGroup;
 			children = (
+				F97B2CE31F69DC75002DCB6E /* Date+DateFormatter.swift */,
 				2195B4C31D0B864700C9ED36 /* AppDelegate.swift */,
 				2195B4C71D0B864700C9ED36 /* Main.storyboard */,
+				F930D8B41F6B13710094FDDA /* AddBagTableViewCell.swift */,
 				2195B4E21D0CCA8E00C9ED36 /* BagCollectionViewCell.swift */,
 				2195B4E41D0CEDF000C9ED36 /* RecipeTableViewCell.swift */,
 				2195B4E01D0CC41E00C9ED36 /* AddBagViewController.swift */,
@@ -115,6 +123,7 @@
 			isa = PBXGroup;
 			children = (
 				2195B4DE1D0CBE5700C9ED36 /* Bag.swift */,
+				F97B2CE51F6AB7CC002DCB6E /* BagStore.swift */,
 				2195B4D51D0B879500C9ED36 /* Recipe.swift */,
 			);
 			name = Models;
@@ -259,8 +268,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				2195B4D61D0B879500C9ED36 /* Recipe.swift in Sources */,
+				F97B2CE41F69DC75002DCB6E /* Date+DateFormatter.swift in Sources */,
 				2195B4C41D0B864700C9ED36 /* AppDelegate.swift in Sources */,
 				2195B4E11D0CC41E00C9ED36 /* AddBagViewController.swift in Sources */,
+				F930D8B51F6B13710094FDDA /* AddBagTableViewCell.swift in Sources */,
+				F97B2CE61F6AB7CC002DCB6E /* BagStore.swift in Sources */,
 				2195B4E71D0DD60E00C9ED36 /* AddRecipeTableViewController.swift in Sources */,
 				2195B4E91D0E62FB00C9ED36 /* RecipeViewController.swift in Sources */,
 				2195B4DB1D0CAE7000C9ED36 /* RecipeTableViewController.swift in Sources */,

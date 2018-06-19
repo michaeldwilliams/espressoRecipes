@@ -20,13 +20,13 @@ class AddRecipeTableViewController: UITableViewController {
     }
     @IBAction func saveBarButtonTapped(_ sender: UIBarButtonItem) {
         recipe.bag = bag
-        recipe.dose = Int(doseTextField.text!)!
-        recipe.yield = Int(yieldTextField.text!)!
-        recipe.time = timeTextField.text!
+        recipe.dose = Float(doseTextField.text!)!
+        recipe.yield = Float(yieldTextField.text!)!
+        recipe.time = Int(timeTextField.text!)!
         recipe.notes = notesTextView.text
-        try! realm.write {
-            realm.add(recipe)
-        }
+//        try! realm.write {
+//            realm.add(recipe)
+//        }
         dismiss(animated: true, completion: nil)
     }
     @IBOutlet weak var doseTextField: UITextField!

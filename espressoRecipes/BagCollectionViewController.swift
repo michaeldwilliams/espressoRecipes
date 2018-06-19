@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import RealmSwift
 import ChameleonFramework
 import DZNEmptyDataSet
 
@@ -15,9 +14,7 @@ private let reuseIdentifier = "bagCell"
 
 class BagCollectionViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout, DZNEmptyDataSetSource, DZNEmptyDataSetDelegate {
 
-    var bags:Results<Bag>!
-    
-    var realm:Realm!
+    var bagStore: BagStore!
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -26,32 +23,22 @@ class BagCollectionViewController: UICollectionViewController, UICollectionViewD
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        realm = try! Realm()
-        
-        self.bags = realm.objects(Bag.self)
-        
-        collectionView!.backgroundColor = .white
-        
+
+        collectionView?.backgroundColor = .white
         collectionView?.emptyDataSetSource = self
         collectionView?.emptyDataSetDelegate = self
 
     }
 
-
-    
     // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using [segue destinationViewController].
-        // Pass the selected object to the new view controller.
         if segue.identifier == "showRecipesForBagSegue" {
             let destVC = segue.destination as! RecipeViewController
             let cell = sender as! BagCollectionViewCell
             let indexPath = collectionView?.indexPath(for: cell)
-            destVC.bagName = bags[(indexPath?.row)!].name
-            destVC.bag = bags[(indexPath?.row)!]
+            destVC.bagName = bagStore.allBags[(indexPath?.row)!].name
+            destVC.bag = bagStore.allBags[(indexPath?.row)!]
             destVC.backgroundColor = cell.backgroundColor
         }
         
@@ -61,22 +48,17 @@ class BagCollectionViewController: UICollectionViewController, UICollectionViewD
     // MARK: UICollectionViewDataSource
 
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
         return 1
     }
 
-
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of items
-        return bags.count
+        return bagStore.allBags.count
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell:BagCollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! BagCollectionViewCell
-    
-        // Configure the cell
         
-        let bag = bags[indexPath.row]
+        let bag = bagStore.allBags[indexPath.row]
         cell.nameLabel.text = bag.name
         cell.roasterLabel.text = bag.roaster
         cell.nameLabel.textColor = .white

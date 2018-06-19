@@ -12,7 +12,7 @@ import DZNEmptyDataSet
 
 class RecipeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, DZNEmptyDataSetSource, DZNEmptyDataSetDelegate {
 
-    var recipes:Results<Recipe>!
+    var recipes = [Recipe]()
     var bagName = ""
     var bag : Bag?
     var backgroundColor : UIColor?
@@ -27,18 +27,14 @@ class RecipeViewController: UIViewController, UITableViewDelegate, UITableViewDa
     @IBOutlet weak var weightLabel: UILabel!
     @IBOutlet weak var roastLabel: UILabel!
     @IBOutlet weak var tastingNotesLabel: UILabel!
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
         self.recipeTableView.reloadData()
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        let realm = try! Realm()
-        let predicate = NSPredicate(format: "bag = %@", argumentArray: [bag!])
-        recipes = realm.objects(Recipe.self).filter(predicate)
         
         bagNameNavigationItem.title = "Recipes"
         
@@ -61,20 +57,13 @@ class RecipeViewController: UIViewController, UITableViewDelegate, UITableViewDa
         
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-    // MARK: - Table view data source
+    // MARK: - TableView DataSource
     
      func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
         return recipes.count
     }
     
      func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
         return 1
     }
     
@@ -108,22 +97,14 @@ class RecipeViewController: UIViewController, UITableViewDelegate, UITableViewDa
         return UIImage(named: "coffee")
     }
 
-    
-    
-    
     // MARK: - Navigation
     
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
         if segue.identifier == "addRecipesForBagSegue" {
             let navVC = segue.destination as! UINavigationController
             let destVC = navVC.viewControllers.first as! AddRecipeTableViewController
             destVC.bag = bag
         }
-        
-        
-    }
 
+    }
 }

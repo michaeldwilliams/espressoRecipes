@@ -11,7 +11,6 @@ import RealmSwift
 
 class RecipeTableViewController: UITableViewController {
 
-    var recipes:Results<Recipe>!
     var bagName = ""
     var bag : Bag?
     
@@ -29,7 +28,7 @@ class RecipeTableViewController: UITableViewController {
         
         let realm = try! Realm()
         let predicate = NSPredicate(format: "bag = %@", argumentArray: [bag!])
-        recipes = realm.objects(Recipe.self).filter(predicate)
+//        recipes = realm.objects(Recipe.self).filter(predicate)
         
         bagNameNavigationItem.title = bagName
         
@@ -43,7 +42,7 @@ class RecipeTableViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return recipes.count
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -54,10 +53,10 @@ class RecipeTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "recipeCell", for: indexPath) as! RecipeTableViewCell
 
-        let recipe = recipes[indexPath.section]
-        cell.recipeLabel?.text = "Dose: \(recipe.dose) | Yield: \(recipe.yield) | Time: \(recipe.time)"
-        cell.notesLabel?.text = recipe.notes
-        cell.configureWithRecipe(recipe)
+//        let recipe = recipes[indexPath.section]
+//        cell.recipeLabel?.text = "Dose: \(recipe.dose) | Yield: \(recipe.yield) | Time: \(recipe.time)"
+//        cell.notesLabel?.text = recipe.notes
+//        cell.configureWithRecipe(recipe)
 //        cell.favoriteStarImageView.image = UIImage(named: "star")
         
         
